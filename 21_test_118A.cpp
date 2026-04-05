@@ -7,7 +7,7 @@ int main()
 {
     string s, s_result = "";
     cin >> s;
-    transform(s.begin(),s.end(),s.begin(),::tolower);
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
     for (int i = 0; i < s.size(); i++)
     {
         if (s.at(i) == 'a' || s.at(i) == 'o' || s.at(i) == 'y' || s.at(i) == 'e' || s.at(i) == 'u' || s.at(i) == 'i')
