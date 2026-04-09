@@ -1,0 +1,29 @@
+# Object files
+*.o
+*.obj
+
+# Executables
+a.out
+*.out
+*.exe
+
+# Debug files
+*.dSYM/
+*.d
+
+# Precompiled headers
+*.pch
+
+# Static and dynamic libraries
+*.a
+*.so
+*.so.*
+*.dylib
+
+# CMake / build directories (if used)
+build/
+cmake-build-*/
+
+# Temporary files
+*.tmp
+*.log
