@@ -3,27 +3,28 @@
 *.obj
 
 # Executables
-a.out
-*.out
 *.exe
+*.out
 
-# Debug files
+# Debug symbols (Linux/macOS)
 *.dSYM/
 *.d
 
-# Precompiled headers
-*.pch
+# Debug symbols (Windows)
+*.pdb
+*.ilk
 
-# Static and dynamic libraries
+# Libraries
 *.a
+*.lib
 *.so
-*.so.*
+*.dll
 *.dylib
 
-# CMake / build directories (if used)
+# Build directories
 build/
 cmake-build-*/
 
-# Temporary files
-*.tmp
+# Misc
 *.log
+*.tmp
