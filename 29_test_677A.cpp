@@ -5,7 +5,7 @@ int main()
 {
     int n, h, a, width = 0;
     cin >> n >> h;
-    while (n --)
+    while (n--)
     {
         cin >> a;
         if (a > h)
