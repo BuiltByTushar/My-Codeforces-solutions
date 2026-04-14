@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    vector<int> arr(4);
+    int count = 0;
+    for (int i = 0; i < 4; i++)
+    {
+        cin >> arr[i];
+    }
+    sort(arr.begin(),arr.end());
+    for (int i = 0; i < 3; i++)
+    {
+        if (arr.at(i) == arr.at(i+1))
+        {
+            count++;
+        }
+    }
+    cout << count << endl;
+    return 0;
+}
