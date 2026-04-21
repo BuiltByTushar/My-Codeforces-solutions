@@ -64,41 +64,43 @@ int main()
                 index.push_back(i);
             }
         }
-        temp = 0;
-        for (int i = 0; i < count; i++)
+        if (count == 0)
         {
-            if (check(s_new, n))
-            {
-                cout << "YES\n";
-                flag = true;
-                break;
-            }
-            reverse(s_new, temp, index.at(i));
-            if (check(s_new, n))
-            {
-                cout << "YES\n";
-                flag = true;
-                break;
-            }
-            else
-            {
-                invert(s_new, temp, index.at(i));
-            }
-            if (check(s_new, n))
-            {
-                cout << "YES\n";
-                flag = true;
-                break;
-            }
-            else
-            {
-                temp = index.at(i) + 1;
-                s_new = s;
-            }
+            cout << "YES\n";
+            continue;
         }
-        if (!flag)
+        else
         {
-            cout << "NO\n";
+            temp = 0;
+            for (int i = 0; i < count; i++)
+            {
+                reverse(s_new, temp, index.at(i));
+                if (check(s_new, n))
+                {
+                    cout << "YES\n";
+                    flag = true;
+                    break;
+                }
+                else
+                {
+                    invert(s_new, temp, index.at(i));
+                }
+                if (check(s_new, n))
+                {
+                    cout << "YES\n";
+                    flag = true;
+                    break;
+                }
+                else
+                {
+                    temp = index.at(i) + 1;
+                    s_new = s;
+                }
+            }
+            if (!flag)
+            {
+                cout << "NO\n";
+            }
         }
     }
     return 0;
