@@ -4,38 +4,36 @@ using namespace std;
 
 int main()
 {
-    int t, n, count;
+    int t, n;
+    char prev;
+    bool flag;
     string s;
     cin >> t;
     while (t--)
     {
-        count = 0;
+        flag = true;
+        prev = 'N';
         cin >> s;
-        n = s.size() - 1;
-        for (int i = 0; i < n; i++)
+        n = s.size();
+        while (n--)
         {
-            if (s.at(i) == s.at(i+1) && s.at(i) == 'Y')
+            if (prev == s.at(0) && s.at(0) == 'Y')
             {
                 cout << "NO\n";
-                goto end;
+                flag = false;
+                break;
             }
-            else if (s.at(i) == s.at(i+1) && s.at(i) == 'N')
+            else if (prev == 'Y' || s.at(0) == 'Y')
             {
-                count++;
+                prev = 'Y';
             }
-            
+            else
+            {
+                prev = 'N';
+            }
+            s.erase(0,1);
         }
-        if (count > 0)
-        {
-            cout << "YES\n";
-        }
-        else
-        {
-            cout << "NO\n";
-        }
-        
-end:
+        if(flag) cout << "YES\n";
     }
-    
     return 0;
 }
