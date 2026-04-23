@@ -4,8 +4,13 @@
 #include <unordered_set>
 using namespace std;
 // I will try this again by map later
+/*
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+
     int t, size = 0, current, k;
     cin >> t;
     vector<string> st(t);
@@ -37,6 +42,35 @@ int main()
             cout << "OK\n";
         }
         size = current;
+    }
+    return 0;
+}
+*/
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    unordered_map<string, int> freq;
+    while (t--)
+    {
+        string s;
+        cin >> s;
+        if (freq[s] == 0)
+        {
+            cout << "OK\n";
+        }
+        else
+        {
+            cout << s << freq[s] << '\n';
+        }
+        freq[s]++;
     }
     return 0;
 }
