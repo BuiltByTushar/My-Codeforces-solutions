@@ -30,9 +30,9 @@ void invert(string &s, int a, int b)
 
 bool check(string &s, int n)
 {
-    while (n--)
+    for (int i = 0; i < n; i++)
     {
-        if (s[n] == s[n - 1])
+        if (s[i] == s[i + 1])
         {
             return false;
         }
@@ -44,6 +44,7 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+
     int t, count, n, temp;
     cin >> t;
     string s, s_new;
@@ -69,6 +70,16 @@ int main()
             cout << "YES\n";
             continue;
         }
+        else if (count == n && n <= 2)
+        {
+            cout << "yES\n";
+            continue;
+        }
+        else if (count == n && n > 2)
+        {
+            cout << "NO\n";
+            continue;
+        }
         else
         {
             temp = 0;
@@ -77,7 +88,7 @@ int main()
                 reverse(s_new, temp, index.at(i));
                 if (check(s_new, n))
                 {
-                    cout << "YES\n";
+                    cout << "YEs\n";
                     flag = true;
                     break;
                 }
@@ -87,7 +98,7 @@ int main()
                 }
                 if (check(s_new, n))
                 {
-                    cout << "YES\n";
+                    cout << "YeS\n";
                     flag = true;
                     break;
                 }
