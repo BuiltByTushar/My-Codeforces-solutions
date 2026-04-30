@@ -4,6 +4,9 @@ using namespace std;
 
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int t, total, max = 0, min = 0, diff, range;
     cin >> t >> total;
     vector<int> a(t);
