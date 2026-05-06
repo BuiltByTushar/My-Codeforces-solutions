@@ -28,3 +28,4 @@ cmake-build-*/
 # Misc
 *.log
 *.tmp
+*exp.cpp
