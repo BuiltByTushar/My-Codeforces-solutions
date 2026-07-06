@@ -29,3 +29,4 @@ cmake-build-*/
 *.log
 *.tmp
 *exp.cpp
+*.prob
