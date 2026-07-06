@@ -18,19 +18,17 @@ A curated collection of my **Codeforces problem solutions**, written to strength
 All files follow this format:
 
 ```text
-<number>_test_<contestID><problemLetter>.cpp
+<contestID><problemLetter>.cpp
 ```
 
 ### 🔹 Example:
 
 ```text
-19_test_2218C.cpp
+2218C.cpp
 ```
 
 ### 📖 Meaning:
 
-* `19` → Serial number / attempt count
-* `test` → Practice or submission indicator
 * `2218C` → Contest ID + Problem Code
 
 This helps in:
