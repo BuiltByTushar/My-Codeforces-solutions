@@ -13,7 +13,27 @@ int main()
         cin >> n >> m;
         string x, s;
         cin >> x >> s;
-        
+        int result = 0;
+        while (x.size() < s.size()) 
+        {
+            x += x;
+            result++;
+        }
+        if (x.find(s) != string::npos) 
+        {
+            cout << result << '\n';
+            continue;
+        }
+        x += x;
+        result++;
+        if (x.find(s) != string::npos)
+        {
+            cout << result << '\n';
+        }
+        else
+        {
+            cout << -1 << '\n';
+        }
     }
     
     return 0;
